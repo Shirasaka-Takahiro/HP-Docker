@@ -1,24 +1,10 @@
-# README
+This is README.md about my HP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Here is things I use to run this HP
 
-Things you may want to cover:
+Ruby on Rails
+MYSQL
+Docker
+Circle CI
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
