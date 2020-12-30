@@ -1,0 +1,6 @@
+<h1>Posts</h1>
+<% @articles.each do |article| %>
+  <%= article.title %>
+  <%= article.created_at %>
+  <%= link_to 'Get to the Article', article_path(article.id) %>
+<% end %>

@@ -1,0 +1,14 @@
+<strong><%= @article.title %></strong>
+<div class="post_show">
+  <strong>:text</strong>
+  <%= @article.text %>
+</div>
+<div class="btn">
+  <%= link_to 'index', articles_path %>
+</div>
+<div class="btn">
+  <%= link_to 'edit', edit_article_path(@article) %>
+</div>
+<div class="btn">
+  <%= link_to 'delete', @article, method: :delete, data:{confirm:"Do you really want to delete?"} %>
+</div>
