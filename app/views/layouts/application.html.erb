@@ -26,8 +26,8 @@
         <%= link_to "WORK", root_path, class:"nav-item nav-link" %>
         <%= link_to "CONTACT", root_path, class:"nav-item nav-link" %>
         <% if user_signed_in? %>
-          <%= link_to "LOG-OUT", destroy_user_session_path, method: :delete, class: "nav-item nav-item" %>
-          <%= link_to "MYPAGE", user_path(current_user.id), class: "nav-item nav-item" %>
+          <%= link_to "LOG-OUT", destroy_user_session_path, method: :delete, class: "nav-item nav-link" %>
+          <%= link_to "MYPAGE", user_path(current_user.id), class: "nav-item nav-link" %>
         <% end %>
       </div>
     </div>

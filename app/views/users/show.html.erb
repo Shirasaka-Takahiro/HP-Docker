@@ -1,0 +1,13 @@
+<h1>MYPAGE</h1>
+<div class="mypage">
+  <div class="user_articles">
+    <p>Articles</p>
+    <% @articles.each do |article| %>
+      <%= link_to article.title, article_path(article.id) %>
+      <%= article.created_at %>
+    <% end %>
+  </div>
+  <div class="new_article btn">
+    <%= link_to "new post", new_article_path %>
+  </div>
+</div>
