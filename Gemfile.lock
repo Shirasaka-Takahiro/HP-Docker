@@ -60,8 +60,8 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
-    acts-as-taggable-on (5.0.0)
-      activerecord (>= 4.2.8)
+    acts-as-taggable-on (7.0.0)
+      activerecord (>= 5.0, < 6.2)
     autoprefixer-rails (10.1.0.0)
       execjs
     bcrypt (3.1.16)
@@ -238,7 +238,7 @@ PLATFORMS
 
 DEPENDENCIES
   actiontext
-  acts-as-taggable-on
+  acts-as-taggable-on (~> 7.0)
   bootsnap (>= 1.4.4)
   bootstrap
   byebug
