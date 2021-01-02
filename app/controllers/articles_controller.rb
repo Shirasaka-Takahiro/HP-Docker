@@ -5,6 +5,17 @@ class ArticlesController < ApplicationController
    
     @articles = Article.all
 
+    if params[:tag_name]
+       @articles = Article.tagged_with("#{params[:tag_name]}")
+    end
+
+  end
+
+  def tag
+    @articles = Article.tagged_with(params[:name])
+    @tags = Article.tag_counts_on(:tags)
+    
+    render 'index'
   end
 
  # 記事の表示
@@ -71,7 +82,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :text)
+    params.require(:article).permit(:title, :text, :tag_list)
   end
 
 end

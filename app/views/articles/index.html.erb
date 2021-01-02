@@ -2,5 +2,12 @@
 <% @articles.each do |article| %>
   <%= article.title %>
   <%= article.created_at %>
+  <%= render :partial => 'tag_list', locals: { tag_list: article.tag_list } %>
   <%= link_to 'Get to the Article', article_path(article.id) %>
 <% end %>
+<h3 class="tag_list text-center">タグ一覧</h3>
+<div class="tag_cloud">
+  <% tag_cloud(Article.tag_counts_on(:tags), %w(css1 css2 css3 css4)) do |tag, css_class| %>
+    <div class="tag_detail"><%= link_to tag.name, { :action => :tag, :name => tag.name }, :class => css_class %></div>
+  <% end %>
+</div>

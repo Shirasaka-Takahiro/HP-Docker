@@ -3,6 +3,7 @@
   <strong>:text</strong>
   <%= @article.text %>
 </div>
+<%= render :partial => 'tag_list', locals: { tag_list: @article.tag_list } %>
 <div class="btn">
   <%= link_to 'index', articles_path %>
 </div>
