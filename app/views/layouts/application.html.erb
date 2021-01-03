@@ -7,6 +7,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -22,9 +23,9 @@
     <div class="collapse navbar-collapse" id="HP-docker">
       <div class="navbar-nav mr-auto">
         <%= link_to "HOME", root_path, class:"nav-item nav-link" %>
-        <%= link_to "ABOUT", root_path, class:"nav-item nav-link" %>
-        <%= link_to "WORK", root_path, class:"nav-item nav-link" %>
-        <%= link_to "CONTACT", root_path, class:"nav-item nav-link" %>
+        <%= link_to "ABOUT", about_index_path, class:"nav-item nav-link" %>
+        <%= link_to "WORK", work_index_path, class:"nav-item nav-link" %>
+        <%= link_to "CONTACT", contact_index_path, class:"nav-item nav-link" %>
         <% if user_signed_in? %>
           <%= link_to "LOG-OUT", destroy_user_session_path, method: :delete, class: "nav-item nav-link" %>
           <%= link_to "MYPAGE", user_path(current_user.id), class: "nav-item nav-link" %>
