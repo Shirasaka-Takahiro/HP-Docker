@@ -1,15 +1,26 @@
-<strong><%= @article.title %></strong>
-<div class="post_show">
-  <strong>:text</strong>
-  <%= @article.text %>
-</div>
-<%= render :partial => 'tag_list', locals: { tag_list: @article.tag_list } %>
-<div class="btn">
-  <%= link_to 'index', articles_path %>
-</div>
-<div class="btn">
-  <%= link_to 'edit', edit_article_path(@article) %>
-</div>
-<div class="btn">
-  <%= link_to 'delete', @article, method: :delete, data:{confirm:"Do you really want to delete?"} %>
+<div class="article_each">
+  <table>
+    <thead>
+      <tr>
+        <th><h3><%= @article.title %></h3></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+       <td><%= @article.text %></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td><%= render :partial => 'tag_list', locals: { tag_list: @article.tag_list } %></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+       <td><%= link_to 'Back to Articles', articles_path %></td>
+       <td><%= link_to 'Edit', edit_article_path(@article) %></td>
+       <td><%= link_to 'delete', @article, method: :delete, data:{confirm:"Do you really want to delete?"} %></td>
+      </tr>
+    </tbody>
+  </table>
 </div>

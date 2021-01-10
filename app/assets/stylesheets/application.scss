@@ -34,10 +34,58 @@
 }
 
 
-// carousel
+// home-image
 
-.carousel-image {
+.home-image {
   width: 100%;
-  padding: 0.5rem 1rem;  
 } 
+
+
+//home-box
+
+.home-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+
+  table {
+    margin: 2rem;
+  }
+  
+}
+
+
+//article-box
+
+.article-box {
+
+  .article {
+
+     table {
+       margin: 3rem 0;
+     }
+ 
+   }
+   
+  .tag_cloud {
+    margin-top: 2rem;
+   }
+
+}
+
+
+//article_each
+
+.article_each {
+
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 1rem 2rem;
+}
+
+
+
+
+
 

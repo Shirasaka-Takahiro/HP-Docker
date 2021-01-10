@@ -1,2 +1,27 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<section class="home">
+  <div class="home-image">
+     <%= image_tag 'panorama-2117310_1280.jpg', class: 'home-image' %>
+  </div>
+  <h3 class="text-center">Articles</h3>
+  <div class="home-box">
+    <% @articles.each do |article| %>
+      <table>
+        <thead>
+          <tr> 
+          <th>Title：<%= link_to article.title, article_path(article.id), class: 'article-intro' %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Boby：<%= strip_tags(article.text.to_s).truncate(10) %></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>Posted：<%= article.created_at.to_s(:datetime_jp) %></td>
+          </tr>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+</section>
