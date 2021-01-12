@@ -59,3 +59,4 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'dotenv-rails'
 gem 'acts-as-taggable-on', '~> 7.0'
+
