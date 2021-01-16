@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
  
-    @articles = Article.all.order(created_at: "DESC")
+    @articles = Article.order("RAND()").limit(3)
 
   end
 end

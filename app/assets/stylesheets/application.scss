@@ -44,23 +44,35 @@ $sp: 480px;  // smartphone
     }
 }
 
+.btn {
+   font-size: 25px;
+   border: 2px solid;
+   padding: 10px;
+   &:hover {
+     opacity: 0.5;
+   }
+}
 
+body {
+  background-color: #EEEEEE;
+}
 
 // tags css
 
-.css1 { font-size: 1.0em; }
-.css2 { font-size: 1.2em; }
-.css3 { font-size: 1.4em; }
-.css4 { font-size: 1.6em; }
+.css1 { font-size: 1.0em;
+        margin: 0.5rem;
+       }
+.css2 { font-size: 1.2em; 
+        margin: 0.5rem; 
+      }
+.css3 { font-size: 1.4em; 
+        margin: 0.5rem; 
+      }
+.css4 { font-size: 1.6em;
+        margin: 0.5rem;
+       }
 
-.tag_cloud {
-  display: flex;
-  justify-content: center;
-  .tag_detail {
-    margin: 10px;
-  }
 
-}
 
 // home-image
 
@@ -85,23 +97,47 @@ $sp: 480px;  // smartphone
       width: 100%;
     } 
 
-    .btn {
+    .welcome-top {
       position: absolute;
       color: white;
       font-weight: bold;
-      font-size: 3rem;
-      top: 70%;
+      font-size: 50px;
+      top: 20%;
       left: 50%;
       -ms-transform: translate(-50%,-50%);
       -webkit-transform: translate(-50%,-50%);
       transform: translate(-50%,-50%);
       margin:0;
       padding:0;
-      border: 3px double white;
+      
+        @include pc {
+          font-size: 4rem;
+        };
+        @include tab {
+          font-size: 2.5rem;
+        };
+        @include sp {
+          font-size: 1.5rem; 
+        };
+     }
+ 
+    .btn {
+      position: absolute;
+      color: white;
+      font-weight: bold;
+      font-size: 2rem;
+      top: 80%;
+      left: 50%;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      margin:0;
+      padding:0;
+      border: 3px solid white;
       padding: 0.5rem;
 
         @include pc {
-          font-size: 2.5rem;
+          font-size: 2rem;
         };
         @include tab {
           font-size: 1.5rem;
@@ -132,8 +168,35 @@ $sp: 480px;  // smartphone
   margin: 1rem;
 
   table {
-    margin: 2rem;
-  }
+    margin: 2.5rem;
+    font-size: 27px;
+       height:200px;
+       background:#FFF;
+       margin:40px auto;
+       font-size: 1.5rem;
+       position: relative;
+       border-radius: 10px;
+       &:after {
+         z-index: -1;
+         position: absolute;
+         content: "";
+         bottom: 15px;
+         right: 10px;
+         left: auto;
+         width: 50%;
+         top: 80%;
+         max-width:300px;
+         background: #777;
+         -webkit-box-shadow: 0 15px 10px #777;
+         -moz-box-shadow: 0 15px 10px #777;
+         box-shadow: 0 15px 10px #777;
+         -webkit-transform: rotate(3deg);
+         -moz-transform: rotate(3deg);
+         -o-transform: rotate(3deg);
+         -ms-transform: rotate(3deg);
+         transform: rotate(3deg);
+       }
+     }
   
 }
 
@@ -145,19 +208,84 @@ $sp: 480px;  // smartphone
   .article {
 
      table {
-       margin: 3rem 0;
+       width:80%;
+       height:200px;
+       background:#FFF;
+       margin:40px auto;
        font-size: 1.5rem;
+       position: relative;
+       border-radius: 10px;
+       &:after {
+         z-index: -1;
+         position: absolute;
+         content: "";
+         bottom: 15px;
+         right: 10px;
+         left: auto;
+         width: 50%;
+         top: 80%;
+         max-width:300px;
+         background: #777;
+         -webkit-box-shadow: 0 15px 10px #777;
+         -moz-box-shadow: 0 15px 10px #777;
+         box-shadow: 0 15px 10px #777;
+         -webkit-transform: rotate(3deg);
+         -moz-transform: rotate(3deg);
+         -o-transform: rotate(3deg);
+         -ms-transform: rotate(3deg);
+         transform: rotate(3deg);
+       }
      }
 
-    .pagination {
-       font-size: 1.5rem;
-     }
  
    }
    
   .tag_cloud {
-    margin-top: 2rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
    }
+
+  .pagination {
+    height: 100px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .pagination a {
+    background-color: grey;
+    text-decoration: none;
+  }
+
+  .pagination * {
+    color: white;
+    margin: 0 7px;
+    text-decoration: none;
+    padding: 12px 12px;
+    border-radius: 25px;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .current {
+    font-style: normal;
+    color: white;
+    background: #93c9ff;
+    border-radius: 22.5px;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .pagination a:hover {
+    background: #93c9ff;
+  }
+
+  .pagination .disabled {
+    color: #666666;
+    padding: 11px 17px;
+    border-radius: 23px;
+    font-family: 'Nunito', sans-serif;
+  }
 
 
 }

@@ -1,7 +1,7 @@
 <h1 class="text-center">Articles</h1>
 <div class="container">
 <div class="article-box row">
-  <div class="article col-sm-7 col-md-7 col-lg-7">
+  <div class="article col-sm-6 col-md-7 col-lg-7">
     <% @articles.each do |article| %>
       <table>
         <thead>
@@ -27,17 +27,17 @@
       </table>
     <% end %>
   </div>
-<div class="tag_cloud col-sm-5 col-md-5 col-lg-5">
+<div class="tag_cloud col-sm-6 col-md-5 col-lg-5">
   <table>
    <thead>
      <tr>
-       <th><h3>Tags</h3></th>
+       <th class="text-center"><h3>Tags</h3></th>
      </tr>
    </thead> 
    <tbody>
      <tr>
      <td><% tag_cloud(Article.tag_counts_on(:tags), %w(css1 css2 css3 css4)) do |tag, css_class| %>
-     <p><%= link_to tag.name, { :action => :tag, :name => tag.name }, :class => css_class %></p>
+     <%= link_to tag.name, { :action => :tag, :name => tag.name }, :class => css_class %>
      <% end %>
      </td>
      </tr>
@@ -50,9 +50,7 @@
    </tbody>
   </table>
 </div>
-<div class="pagination">
   <%= will_paginate @articles %>
-</div>
 </div>
 </div>
 
