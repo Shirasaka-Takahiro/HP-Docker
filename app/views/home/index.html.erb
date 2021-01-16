@@ -2,6 +2,7 @@
   <div class="image-bg">
     <div class="image">
       <%= image_tag 'panorama-2117310_1280.jpg', class: 'image' %>
+      <span class="welcome-top"><h3>Welcome to Onyanko-Labo</h3></span>
       <h3><%= link_to 'HELLO', about_index_path, class: 'btn' %></h3>
     </div>
   </div>
@@ -26,5 +27,6 @@
         </tbody>
       </table>
     <% end %>
+    <%= link_to 'more articles ->', articles_path, class: "btn" %>
   </div>
 </section>
