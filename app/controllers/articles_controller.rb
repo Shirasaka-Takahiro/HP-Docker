@@ -1,9 +1,11 @@
 class ArticlesController < ApplicationController
 
+  PER = 5
+
  # 記事の一覧表示
   def index
    
-    @articles = Article.all.order(created_at: "DESC")
+    @articles = Article.all.page(params[:page]).per(PER).order(created_at: "DESC")
 
     if params[:tag_name]
        @articles = Article.tagged_with("#{params[:tag_name]}")
