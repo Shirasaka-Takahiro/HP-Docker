@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
  # 記事の一覧表示
   def index
    
-    @articles = Article.all.page(params[:page]).per(PER).order(created_at: "DESC")
+    @articles = Article.all.paginate(page: params[:page], per_page: 5).order(created_at: "DESC")
 
     if params[:tag_name]
        @articles = Article.tagged_with("#{params[:tag_name]}")
@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
   end
 
   def tag
-    @articles = Article.tagged_with(params[:name])
+    @articles = Article.paginate(page: params[:page], per_page: 5).tagged_with(params[:name])
     @tags = Article.tag_counts_on(:tags)
     
     render 'index'
