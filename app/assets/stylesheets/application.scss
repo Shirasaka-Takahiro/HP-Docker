@@ -95,14 +95,14 @@ body {
  
     .image {
       width: 100%;
-    } 
 
+     
     .welcome-top {
       position: absolute;
       color: white;
       font-weight: bold;
-      font-size: 50px;
-      top: 20%;
+      font-size: 45px;
+      top: 25%;
       left: 50%;
       -ms-transform: translate(-50%,-50%);
       -webkit-transform: translate(-50%,-50%);
@@ -111,21 +111,24 @@ body {
       padding:0;
       
         @include pc {
-          font-size: 4rem;
+          font-size: 50px;
         };
         @include tab {
-          font-size: 2.5rem;
+          font-size: 35px;
         };
         @include sp {
-          font-size: 1.5rem; 
+          font-size: 25px; 
         };
      }
+
+    } 
+
  
     .btn {
       position: absolute;
       color: white;
       font-weight: bold;
-      font-size: 2rem;
+      font-size: 30px;
       top: 80%;
       left: 50%;
       -ms-transform: translate(-50%,-50%);
@@ -137,13 +140,13 @@ body {
       padding: 0.5rem;
 
         @include pc {
-          font-size: 2rem;
+          font-size: 35px;
         };
         @include tab {
-          font-size: 1.5rem;
+          font-size: 25px;
         };
         @include sp {
-          font-size: 0.5rem;
+          font-size: 18px;
 
         };
 
@@ -158,6 +161,23 @@ body {
  
 }
 
+
+.article-top {
+    text-align: center;
+    font-size: 50px;
+
+       @include pc {
+         font-size: 40px;
+        };
+       @include tab {
+         font-size: 40px;
+        };
+       @include sp {
+         font-size: 35px;
+        };
+    
+ }
+
 //home-box
 
 .home-box {
@@ -165,7 +185,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 1rem;
+  margin: 0 1rem 1.5rem 1rem;
+ 
 
   table {
     margin: 2.5rem;
