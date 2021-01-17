@@ -2,11 +2,11 @@
   <div class="image-bg">
     <div class="image">
       <%= image_tag 'panorama-2117310_1280.jpg', class: 'image' %>
-      <span class="welcome-top"><h3>Welcome to Onyanko-Labo</h3></span>
+      <div class="welcome-top">Welcome to my website</div>
       <h3><%= link_to 'HELLO', about_index_path, class: 'btn' %></h3>
     </div>
   </div>
-  <h3 class="text-center">Articles</h3>
+  <div class="article-top">Articles</div>
   <div class="home-box">
     <% @articles.each do |article| %>
       <table>
