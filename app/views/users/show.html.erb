@@ -1,14 +1,34 @@
-<h1>MYPAGE</h1>
+<h1 class="text-center">MYPAGE</h1>
 <div class="mypage">
-  <div class="user_articles">
-    <p>Articles</p>
-    <p>Total:  <%= @articles.count %></p>
-    <% @articles.each do |article| %>
-      <%= link_to article.title, article_path(article.id) %>
-      <%= article.created_at %>
-    <% end %>
-  </div>
+  <div class="container">
+    <div class="user-articles">
+      <span>Articles</span>
+      <span>Total:  <%= @article.count %></span>
+      <div class="article">
+        <a>Recent articles</a>
+        <p><% @articles.each do |article| %>
+        <table>
+          <thead>
+            <tr>
+            <th>Title：<%= link_to article.title, article_path(article.id) %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Body：<%= strip_tags(article.text.to_s).truncate(40) %></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>Posted：<%= article.created_at.to_s(:datetime_jp) %></td>
+            </tr>
+          </tbody>
+        </table>
+        </p><% end %>
+      </div>
+    </div>
   <div class="new_article btn">
     <%= link_to "new post", new_article_path %>
+  </div>
   </div>
 </div>
