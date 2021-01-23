@@ -15,11 +15,6 @@
           </thead>
           <tbody>
             <tr>
-              <td>Body：<%= strip_tags(article.text.to_s).truncate(40) %></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
               <td>Posted：<%= article.created_at.to_s(:datetime_jp) %></td>
             </tr>
           </tbody>
